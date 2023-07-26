@@ -1,42 +1,45 @@
-
-h1{
-    font-size: 35px;
-    text-align: center ;
-    font-family: cursive ,Brush Script MT, Arial,Bradley Hand, ;
-    padding-right: 300px;
-    margin: 0%; 
-    display: flex;
+header h1{
+    font-size: 35px ;
+    text-align: center;
 }
 header {
-    display: flex;
     background-color :rgb(214, 169, 118) ;
-    padding-left : 100px;
-    
 }
-nav {
+.navbar {
     display: flex;
-    padding-left: 380px;
-    height: 90px;
+    margin-left: 7%;
+    margin-right: 7%;
+    justify-content: space-between;
+    align-items: center;
 
 }
+#moulin {
+    text-decoration: none;
+    color: black;
+}
+
+#rightbar {
+    align-items: center;
+    justify-items: center ;
+}
+
 #panier {  
     width: 60px;
     height: auto ;
-    padding-top: 10px;
+    
 }
 #contact {
     color:black ;
     text-decoration: none;
-    font-size: large;
-    padding-top: 30px;
-    padding-right: 30px;
+    font-size: large ;
+
 }
 
 main {
     background-color: rgb(126, 126, 126);
     padding :0% ;
-    margin: 0px 0px 0px 0px;
-    padding-left: 8%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 #copyright {
     text-align : right ;
@@ -108,4 +111,7 @@ h3 {
 }
 #achat {
     display: flex;
+}
+#carte {
+    vertical-align: top;
 }
