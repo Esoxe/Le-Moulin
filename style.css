@@ -1,13 +1,13 @@
 body {
     margin: 87px;
-    background-color: rgb(126, 126, 126); ;
+    background-color: #e63946;
 }
 header h1{
     font-size: 35px ;
     text-align: center;
 }
 header {
-    background-color :rgba(212, 207, 200, 0.918) ;
+    background-color : #a8dadce0 ;
     position: fixed ;
     width: 100%;
     top: 0 ;
@@ -63,16 +63,19 @@ header {
     width: 2.3em;
     bottom: 0.4em ;
     left: 0.8em;
+    visibility: hidden;
 }
 #resultatPanier {
     position: absolute;
     display: inline;
-    left: 1.7em;
-    bottom: 0.1;
+    top :15px;
+    width: 20px ;
+    left: 22px;
+    text-align: center;
 }
 
 main {
-    background-color: rgb(179, 152, 152);
+    background-color:  #457b9d;
     padding-top: 15px;
 }
 
@@ -111,11 +114,12 @@ h2 {
 }
 
 footer {
-    background-color: rgb(65, 65, 65) ;
+    background-color:#1d3557 ;
 }
 .footer_align {
-    margin: 0% 10% 0% 10%;
+    margin: 0% 2% 0% 2%;
 }
+
 
 #f_part1 {
     display: flex;
@@ -133,17 +137,21 @@ footer {
 #table_horaires {
     color: white;
     font-size: 20px;
-   
+    margin :auto;
 }
 
 #table_horaires td
 {
     height: 10px;
 }
+#table_horaires td:nth-child(1)
+{
+    width: 200px;
+}
 
 h3 {
     color:rgb(0, 255, 76);
-    margin-bottom: 0%;
+    
 }
  #cartedevisite {
     width: 250;
@@ -153,9 +161,10 @@ h3 {
 #noustrouver {
     color:white ;
     vertical-align: top;
-    width: 250;
     height: auto;
 }
+
+
 #paiement
 {
     color:white ;
@@ -163,7 +172,7 @@ h3 {
 }
 
 #f_part2 {
-    display: block;
+    display: flex;
 }
 
 #copyright {
@@ -171,3 +180,28 @@ h3 {
     color:red;
     font-size:x-large;
 }
+
+
+@media screen and (max-width: 900px) {
+    #f_part1 {
+      flex-direction: column;
+      text-align: center;
+    }
+    #cartedevisite {
+        
+      max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur */
+      height: auto;
+    }
+  
+    #carte {
+      width: 100%;
+      height: 300px; /* Hauteur fixe pour la carte Google Maps */
+    }
+    #f_part1 .column_space {
+        padding: 0;
+    }
+    #achat {
+        flex-direction: column;
+    }
+
+  } 
