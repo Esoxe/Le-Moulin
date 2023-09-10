@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
@@ -40,7 +41,7 @@
                 <p>Le meilleur croissant de la région survit sur un lit de beurrre</p>
                 <label for="quantite">Quantité</label>
                 <input class="button" id="quantite1" type="number" value ="1" min="1">
-                <button class="ajoutpanier" onclick="recupererValeur()">Ajouter au panier</button>
+                <button class="ajoutpanier" onclick="recupererValeur(1)">Ajouter au panier</button>
             </div>
         </div>
         <div id="produit1">
@@ -50,7 +51,7 @@
                 <p>Le meilleur pain au chocolat avec son coeur fondant</p>
                 <label for="quantite">Quantité</label>
                 <input class="button" id="quantite2" type="number" value="1" min="1">
-                <input class="ajoutpanier" type="submit" value="Ajouter au panier" >
+                <button class="ajoutpanier" onclick="recupererValeur(2)">Ajouter au panier</button>
             </div>
         </div>
         </div>

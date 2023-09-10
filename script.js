@@ -10,14 +10,27 @@ function afficherResultatPanier(totalPanier) {
 
 afficherResultatPanier(0);
 
-function recupererValeur() {
-     var nombreCroissants =(document.getElementById("quantite1").value) ;
-
+function recupererValeur(produit)
+ {  
      var valeurPanier=document.getElementById("resultatPanier").textContent;
     if (valeurPanier=="") {
-        afficherResultatPanier(0+parseInt(nombreCroissants))
+        afficherResultatPanier(0+parseInt(DetermineProduit(produit)));
     } else {
-        afficherResultatPanier(parseInt(valeurPanier)+(parseInt(nombreCroissants)))
+        afficherResultatPanier((parseInt(valeurPanier))+parseInt(DetermineProduit(produit)))
+    }
+}
+
+function DetermineProduit(produit)
+{
+    switch (produit) {
+        case 1:
+        return document.getElementById("quantite1").value;
+    
+        case 2:
+            return document.getElementById("quantite2").value;
+    
+        default:
+            return 0;
     }
 }
 
