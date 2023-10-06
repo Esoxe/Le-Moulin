@@ -11,7 +11,7 @@
             <div class="navbar"> 
                 <a href="#" ><img src="moulin.png" width="80"> </a>        
                     <a  id="moulin" href="#"><h1>LE MOULIN</h1></a>
-                    <div id="rightbar" onclick="openSidebar()">
+                    <div id="rightbar" onclick="toogleSidebar(0)">
                      <a id="contact" href="#f_part1">CONTACT</a>
                      <a id="panier_overlay" >
                      <img id="panier" src="panier.png">
@@ -21,17 +21,11 @@
                     </div>
             </div>
         </header>
-        <!--sidebar-->
-        <div id="sidebar" class="sidebar">
-        <div class="sidebar_article">
-
-        </div>
-
-
         </div>
         <main >
             <div id="mySidebar" class="sidebar">
                 <div class="sidebar-content">
+                    <button class="close-sidebar" onclick="toogleSidebar(1)">&times;</button>
                     <h2>Mon panier</h2>
                     <ul>
                         <li>Produit 1 - 10€ </li>

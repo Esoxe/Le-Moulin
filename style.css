@@ -21,6 +21,7 @@ header {
     margin-right: 7%;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 }
 #moulin {
     text-decoration: none;
@@ -195,11 +196,20 @@ footer h3 {
     position: fixed;
     top:0;
     right:0;
-    background-color: #f1f1f1;
+    background-color: #99babb;
+    transition: all 0.25s;
     overflow-x: hidden;
-    transition: 0,3s;
     padding-top: 60px;
+    z-index: 1000 ;
 }
+.close-sidebar {
+    position:absolute;
+    top:10px;
+    right: 10px;
+    font-size:30px;
+    cursor: pointer;
+}
+
 
 .sidebar-content {
     padding: 16px;

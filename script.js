@@ -42,10 +42,16 @@ function AffichageUIPanier()
 
 }
 
-function openSidebar() 
+function toogleSidebar() 
 {
-    document.getElementById("mySidebar").style.width = "250px";
+    var sidebar=document.getElementById("mySidebar")
+
+    if(sidebar.style.width ==="300px") {
+        sidebar.style.width = "0" ;
+    }
+    else{
+        sidebar.style.width ="300px";  
+    }
 }
-function closeSidebar () {
-    document.getElementById("mySidebar").style.width="0" ;
-}
+
+
