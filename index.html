@@ -11,9 +11,9 @@
             <div class="navbar"> 
                 <a href="#" ><img src="moulin.png" width="80"> </a>        
                     <a  id="moulin" href="#"><h1>LE MOULIN</h1></a>
-                    <div id="rightbar">
+                    <div id="rightbar" onclick="openSidebar()">
                      <a id="contact" href="#f_part1">CONTACT</a>
-                     <a id="panier_overlay" href="panier.html">
+                     <a id="panier_overlay" >
                      <img id="panier" src="panier.png">
                      <img id="compteur" src="rond.png"> 
                      <p id="resultatPanier"></p>
@@ -21,40 +21,65 @@
                     </div>
             </div>
         </header>
+        <!--sidebar-->
+        <div id="sidebar" class="sidebar">
+        <div class="sidebar_article">
+
+        </div>
+
+
+        </div>
         <main >
-        <h2>Plus qu'une boulangerie pour vous servir</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-           when an unknown printer took a galley of type and scrambled it to make a type 
-           specimen book. It has survived not only five centuries, but also the leap into
-           electronic typesetting, remaining essentially unchanged. It was popularised in
-           the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-           and more recently with desktop publishing software like Aldus PageMaker including 
-           versions of Lorem Ipsum.
-        </p>
-        <h2>Passer commande !</h2>
-        <div id="achat">
-        <div id="produit1">
-            <img class="image" src="croissant.png" width="250" height="250">
-            <div id="presentation">
-                <h4>Le Croissant</h4> 
-                <p>Le meilleur croissant de la région survit sur un lit de beurrre</p>
-                <label for="quantite">Quantité</label>
-                <input class="button" id="quantite1" type="number" value ="1" min="1">
-                <button class="ajoutpanier" onclick="recupererValeur(1)">Ajouter au panier</button>
+            <div id="mySidebar" class="sidebar">
+                <div class="sidebar-content">
+                    <h2>Mon panier</h2>
+                    <ul>
+                        <li>Produit 1 - 10€ </li>
+                        <li>Produit 2 - 15€ </li>
+                        <li>Produit 3 - 20€ </li>
+                    </ul>
+                    <p>Total : 45€</p>
+                </div>
             </div>
-        </div>
-        <div id="produit1">
-            <img class="image" src="painchocolat.jpeg"> 
-            <div id="presentation">
-                <h4>Pain au chocolat</h4>
-                <p>Le meilleur pain au chocolat avec son coeur fondant</p>
-                <label for="quantite">Quantité</label>
-                <input class="button" id="quantite2" type="number" value="1" min="1">
-                <button class="ajoutpanier" onclick="recupererValeur(2)">Ajouter au panier</button>
+            <h2>Plus qu'une boulangerie pour vous servir</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including 
+            versions of Lorem Ipsum.
+            </p>
+            <h2>Passer commande !</h2>
+            <div id="achat">
+            <div id="produit1" class="inline">
+                <img id="img1" class="image" src="croissant.png" width="250" height="250">
+                <div id="presentation">
+                    <h4>Le Croissant</h4> 
+                    <p>Le meilleur croissant de la région survit sur un lit de beurrre</p>
+                    <label for="quantite">Quantité</label>
+                    <input class="quantite" id="quantite1" type="number" value ="1" min="1">
+                    <div class="inline">
+                    <h3 class="prix">Prix : 1,00 € </h3>
+                    <button class="ajoutpanier" onclick="recupererValeur(1)">Ajouter au panier</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
+            <div id="produit2" class ="inline" >
+                <img class="image" src="painchocolat.jpeg"> 
+                <div id="presentation">
+                    <h4>Pain au chocolat</h4>
+                    <p>Le meilleur pain au chocolat avec son coeur fondant</p>
+                    <label for="quantite">Quantité</label>
+                    <input class="quantite" id="quantite2" type="number" value="1" min="1">
+                    <div class="inline">
+                    <h3 class="prix">Prix : 1,10 € </h3>
+                    <button class="ajoutpanier" onclick="recupererValeur(2)">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+            </div>
         </main>
         <footer>
             <div id="f_part1" class="footer_align">      
