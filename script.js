@@ -3,7 +3,6 @@ function afficherResultatPanier(totalPanier) {
     if( totalPanier!==0) {
         resultatPanierElement.textContent=totalPanier;
         document.getElementById("compteur").style.visibility = "visible";
-        AffchageUIPanier(produit)
     } else {
         resultatPanierElement.textContent="";
     }
@@ -11,47 +10,56 @@ function afficherResultatPanier(totalPanier) {
 
 afficherResultatPanier(0);
 
+function openSidebar() {
+    document.getElementById("mySidebar").style.width ="300px"
+}
+
 function recupererValeur(produit)
  {  
-     var valeurPanier=document.getElementById("resultatPanier").textContent;
+    var prixTotal=document.getElementById("prixTotal")
+    var prix = document.getElementById("prix"+produit)
+    var quantite = document.getElementById('quantite'+produit)
+    var valeurPanier=document.getElementById("resultatPanier").textContent;
     if (valeurPanier=="") {
-        afficherResultatPanier(0+parseInt(DetermineProduit(produit)));
+        afficherResultatPanier(0+Number(quantite.textContent));
     } else {
-        afficherResultatPanier((parseInt(valeurPanier))+parseInt(DetermineProduit(produit)))
+        afficherResultatPanier(Number(valeurPanier)+Number(quantite.textContent))
+    }
+    prixTotal.textContent=(Number(prixTotal.textContent)+Number(prix.textContent)).toFixed(2);
+}
+
+window.onclick =function(event) {
+    var sidebar =document.getElementById("mySidebar")
+    var panier = document.getElementById("panier_overlay")
+    var add_panier1 = document.getElementById("add_panier1")
+    var add_panier2 = document.getElementById("add_panier2")
+    if(!sidebar.contains(event.target) && !panier.contains(event.target) && !add_panier1.contains(event.target) && !add_panier2.contains(event.target)){
+        closeSidebar();
     }
 }
 
-function DetermineProduit(produit)
-{
-    switch (produit) {
-        case 1:
-        var img_produit_1 = document.getElementById("img1").value;
-        var nom_produit_1 = document.getElementById("img1").value;
-        var _produit_1 = document.getElementById("img1").value;
-        return document.getElementById("quantite1").value;
-    
-        case 2:
-            return document.getElementById("quantite2").value;
-    
-        default:
-            return 0;
-    }
-}
-function AffichageUIPanier()
-{
-
+function closeSidebar() {
+    document.getElementById("mySidebar").style.width = "0"
 }
 
-function toogleSidebar() 
-{
-    var sidebar=document.getElementById("mySidebar")
-
-    if(sidebar.style.width ==="300px") {
-        sidebar.style.width = "0" ;
-    }
-    else{
-        sidebar.style.width ="300px";  
+function update_Quantite(produit,modifier,prix_unite) {
+    var prix = document.getElementById("prix"+produit);
+    var quantite = document.getElementById("quantite"+produit);
+    if(quantite.textContent>1 || modifier>0) {
+    quantite.textContent=String(Number(quantite.textContent)+modifier)
+    prix.textContent=String((Number(prix.textContent)+prix_unite).toFixed(2))
     }
 }
+const panier = document.getElementById("panier_overlay");
+const sidebar = document.getElementById("mySidebar");
 
-
+if(sidebar.style.width!="300px") {
+panier.addEventListener('mouseover',() => {
+    sidebar.style.width="50px"
+})
+}
+panier.addEventListener('mouseout',() => {
+    if(sidebar.style.width==="50px"){
+    sidebar.style.width="0px"
+    }
+})

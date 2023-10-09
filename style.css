@@ -2,7 +2,7 @@ body {
     margin: 87px;
     background-color: #e63946;
 }
-header h1{
+ h1{
     font-size: 35px ;
     text-align: center;
 }
@@ -26,6 +26,7 @@ header {
 #moulin {
     text-decoration: none;
     color: black;
+    padding-left: 80px;
 }
 
 #rightbar {
@@ -50,6 +51,13 @@ header {
     left: 0;
     text-decoration: none;
     color: white;
+}
+
+#panier_overlay :hover  {
+    cursor: pointer;
+}
+#panier_overlay:hover +#sidebar {
+    width: 1500px;
 }
 
 #panier {  
@@ -83,16 +91,37 @@ main {
 .inline {
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: space-around;
 }
 
 h2 {
-    text-align: left;
-    margin :0% ;
+    text-align: center;
+}
+#intro {
+    padding: 0% 6%;
+}
+
+.carrousel {
+    display: flex;
+}
+.slides {
+    list-style-type: none;
+    padding: 0;
+    padding-right: 50px;
+}
+.slides img {
+    width: 600px;
+    height: auto;
+}
+#presentation_intro {
+    font-size: 20px;
+    font-family: "Open Sans",sans-serif,"google"
 }
 
 .prix {
     display: flex;
-    color: red;
+    color: black;
     margin-right: 6%;
 }
 
@@ -102,21 +131,51 @@ h2 {
     height: auto;
 }
 .quantite {
-    width: 50px;
+    text-align: center;
 }
 #presentation {
-    vertical-align: top;
+    vertical-align: center;
+    text-align: center;
 }
+#quantite-prix td {
+   width: 200px ;
+}
+.round_button {
+    border: 0;
+    border-radius: 50%;
+    background-color:#bcbcbc ;
+    color: white;
+}
+.round_button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+.quantite_nb {
+    padding: 0% 5px;
+}
+
 .ajoutpanier {
     height: 23px;
     border:none;
     color: white;
     background-color: rgb(255, 94, 0);
-
+    border-radius: 100px;
+    margin-bottom: 10%;
 }
+.ajoutpanier:hover {
+    background-color: rgba(255, 94, 0, 0.589);
+    cursor: pointer;
+}    
+
 #achat {
     display: flex;
+    margin: 0% 6%;
+    font-weight: 1000;
 }
+#titre_achat {
+    font-size: 2em ;
+}
+
 #carte {
     vertical-align: top;
 }
@@ -132,6 +191,8 @@ footer {
 #f_part1 {
     display: flex;
     font-size: large;
+    justify-content: space-evenly;
+    
 }
 .column_space {
     padding: 0% 8% 0% 0% ;
@@ -182,6 +243,7 @@ footer h3 {
 
 #f_part2 {
     display: flex;
+    padding-left: 4%;
 }
 
 #copyright {
@@ -191,30 +253,66 @@ footer h3 {
 }
 
 .sidebar {
+    display: flex;
     height:100%;
-    width:0;
+    width:0px;
     position: fixed;
     top:0;
     right:0;
     background-color: #99babb;
     transition: all 0.25s;
     overflow-x: hidden;
-    padding-top: 60px;
+    padding-top: 0;
     z-index: 1000 ;
+    flex-direction: column;
 }
+
 .close-sidebar {
     position:absolute;
     top:10px;
     right: 10px;
     font-size:30px;
     cursor: pointer;
+    transition: all 0.25s;
 }
 
-
-.sidebar-content {
-    padding: 16px;
+.sidebar-title {
+    background-color: #FEF4E6 ;
 }
 
+#bottom_container {
+    border-top: 2px solid  #686b6b;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 8%;
+    font-weight: 1000;
+    padding: 0 5%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.bottom_button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.747);
+    margin-bottom: 5%;
+    height: 40px;
+}
+.bottom_button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+#continuer_achat {
+    background-color: #99babb ;
+    border: 2px solid black ;
+    color: black;
+}
+#continuer_achat:hover {
+    background-color: #a8dadce0 ;
+}
+
+#prixTotal {
+    padding-left: 100px;
+}
 
 
 
@@ -251,6 +349,10 @@ footer h3 {
         padding: 0;
     }
     #achat {
+        flex-direction: column;
+    }
+    main {
+        display: flex;
         flex-direction: column;
     }
 

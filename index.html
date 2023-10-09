@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
+        <script type="text/javascript" src="script.js" defer></script>
     <meta name="viewport" content="width=device-witdh, initial-scale =1.0">
         <title>Page d'accueil</title>
     </head> 
@@ -11,9 +12,9 @@
             <div class="navbar"> 
                 <a href="#" ><img src="moulin.png" width="80"> </a>        
                     <a  id="moulin" href="#"><h1>LE MOULIN</h1></a>
-                    <div id="rightbar" onclick="toogleSidebar(0)">
+                    <div id="rightbar">
                      <a id="contact" href="#f_part1">CONTACT</a>
-                     <a id="panier_overlay" >
+                     <div id="panier_overlay"  onclick="openSidebar()">
                      <img id="panier" src="panier.png">
                      <img id="compteur" src="rond.png"> 
                      <p id="resultatPanier"></p>
@@ -24,40 +25,61 @@
         </div>
         <main >
             <div id="mySidebar" class="sidebar">
-                <div class="sidebar-content">
-                    <button class="close-sidebar" onclick="toogleSidebar(1)">&times;</button>
-                    <h2>Mon panier</h2>
+                <div class="sidebar-content" id="content">
+                    <button class="close-sidebar"id="closeSidebar" onclick="closeSidebar()">&times;</button>
+                    <div id="sidebar-title">
+                    <h2>Votre panier</h2>
+                    </div>
                     <ul>
                         <li>Produit 1 - 10€ </li>
                         <li>Produit 2 - 15€ </li>
                         <li>Produit 3 - 20€ </li>
                     </ul>
-                    <p>Total : 45€</p>
+                </div>
+                <div id="bottom_container">
+                    <p id="Total">Total Commande<span id="prixTotal">1.00</span> &#8364;</p>
+                    <button class="bottom_button" onclick="window.location.href='panier.html';">Commander</button>
+                    <button id="continuer_achat" class="bottom_button" onclick="closeSidebar()">Continuer mes achats</button>
                 </div>
             </div>
-            <h2>Plus qu'une boulangerie pour vous servir</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker including 
-            versions of Lorem Ipsum.
-            </p>
-            <h2>Passer commande !</h2>
-            <div id="achat">
+            <div id="intro">
+            <h1>Plus qu'une boulangerie pour vous servir !</h1>
+            <div class="carrousel">
+                <ul class="slides">
+                    <li><img src="devanture.jpg" alt="Image moulin"></li>
+                </ul>
+            <div id="presentation_intro">
+            <h2>LE COIN DU CHEF BRUNO PERRET</h2>
+            <p>Je suis un boulanger passionné qui aime mon terroir. Mes réalisations sont faites dans la tradition avec un grand respect du goût. La boulangerie Le Moulin de Bruno est le lieu d'échange avec les clients dans la convivialité.</p>
+            <p>Tous les produits disponibles sont faits maison. J'ai un grand plaisir à offrir des saveurs inoubliables provoquant un feu d'artifice pour vos papilles.</p>
+            <p>La galerie photos est juste une petite mise en bouche. N'hésitez pas à me contacter, et à venir me voir.</p>
+            </div>
+            </div>
+            </div>
+            <h2 id="titre_achat">Passer commande !</h2>
+            <div id="achat" class="">
             <div id="produit1" class="inline">
                 <img id="img1" class="image" src="croissant.png" width="250" height="250">
                 <div id="presentation">
                     <h4>Le Croissant</h4> 
-                    <p>Le meilleur croissant de la région survit sur un lit de beurrre</p>
-                    <label for="quantite">Quantité</label>
-                    <input class="quantite" id="quantite1" type="number" value ="1" min="1">
-                    <div class="inline">
-                    <h3 class="prix">Prix : 1,00 € </h3>
-                    <button class="ajoutpanier" onclick="recupererValeur(1)">Ajouter au panier</button>
-                    </div>
+                    <p>Le meilleur croissant de la région servit sur un lit de beurrre</p>
+                    <table id="quantite-prix">
+                        <tr>
+                            <th>QUANTITÉ</th>
+                            <th>PRIX</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                 <button class="round_button" onclick="update_Quantite(1,-1,-1)">&minus;</button>
+                                 <span id="quantite1" class="quantite_nb"> 1 </span>
+                                 <button class="round_button" onclick="update_Quantite(1,1,1)">&#43;</button>
+                                </div>
+                            </td>
+                            <td><p><span id="prix1">1.00</span>€</p></td>
+                        </tr>
+                    </table>
+                    <button id="add_panier1" class="ajoutpanier" onclick="recupererValeur(1);openSidebar();">Ajouter au panier</button>
                 </div>
             </div>
             <div id="produit2" class ="inline" >
@@ -65,11 +87,23 @@
                 <div id="presentation">
                     <h4>Pain au chocolat</h4>
                     <p>Le meilleur pain au chocolat avec son coeur fondant</p>
-                    <label for="quantite">Quantité</label>
-                    <input class="quantite" id="quantite2" type="number" value="1" min="1">
-                    <div class="inline">
-                    <h3 class="prix">Prix : 1,10 € </h3>
-                    <button class="ajoutpanier" onclick="recupererValeur(2)">Ajouter au panier</button>
+                    <table id="quantite-prix">
+                        <tr>
+                            <th>QUANTITÉ</th>
+                            <th>PRIX</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                 <button class="round_button" onclick="update_Quantite(2,-1,-1.10)">&minus;</button>
+                                 <span id="quantite2" class="quantite_nb"> 1 </span>
+                                 <button class="round_button" onclick="update_Quantite(2,1,1.10)">&#43;</button>
+                                </div>
+                            </td>
+                            <td><p><span id="prix2">1.10</span>€</p></td>
+                        </tr>
+                    </table>
+                    <button id="add_panier2" class="ajoutpanier" onclick="recupererValeur(2);openSidebar();">Ajouter au panier</button>
                     </div>
                 </div>
             </div>
