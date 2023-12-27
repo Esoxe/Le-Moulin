@@ -1,6 +1,7 @@
 body {
-    margin: 87px;
-    background-color: #e63946;
+    margin: 87px 87px;
+
+    background-color: #FFFCF8;
 }
  h1{
     font-size: 35px ;
@@ -13,6 +14,7 @@ header {
     top: 0 ;
     left: 0;
     z-index:1000 ;
+    box-shadow: 0px 5px 5px #888888
     
 }
 .navbar {
@@ -26,7 +28,7 @@ header {
 #moulin {
     text-decoration: none;
     color: black;
-    padding-left: 80px;
+    margin-left: 80px;
 }
 
 #rightbar {
@@ -84,11 +86,14 @@ header {
 }
 
 main {
+margin: 60px 0;
     background-color:  #457b9d;
-    padding-top: 15px;
+    margin-top: 5%;
+    box-shadow: 0px 5px 5px #888888
 }
 
 .inline {
+    margin: 0;
     display: flex;
     align-items: center;
     text-align: center;
@@ -114,6 +119,10 @@ h2 {
     width: 600px;
     height: auto;
 }
+#titremain {
+    padding-top: 50px;
+}
+
 #presentation_intro {
     font-size: 20px;
     font-family: "Open Sans",sans-serif,"google"
@@ -126,7 +135,7 @@ h2 {
 }
 
 .image {
-    width: 25em ;
+    width: auto ;
     padding-right: 0.4em;
     height: auto;
 }
@@ -169,8 +178,9 @@ h2 {
 
 #achat {
     display: flex;
-    margin: 0% 6%;
+    padding: 0% 6%;
     font-weight: 1000;
+    box-sizing : border-box;
 }
 #titre_achat {
     font-size: 2em ;

@@ -13,7 +13,7 @@
                 <a href="#" ><img src="moulin.png" width="80"> </a>        
                     <a  id="moulin" href="#"><h1>LE MOULIN</h1></a>
                     <div id="rightbar">
-                     <a id="contact" href="#f_part1">CONTACT</a>
+                     <a id="contact" href="#quantite-prix">CONTACT</a>
                      <div id="panier_overlay"  onclick="openSidebar()">
                      <img id="panier" src="panier.png">
                      <img id="compteur" src="rond.png"> 
@@ -37,15 +37,16 @@
                     </ul>
                 </div>
                 <div id="bottom_container">
-                    <p id="Total">Total Commande<span id="prixTotal">1.00</span> &#8364;</p>
+                    <p id="Total">Total Commande<span id="prixTotal">0.00</span> &#8364;</p>
                     <button class="bottom_button" onclick="window.location.href='panier.html';">Commander</button>
                     <button id="continuer_achat" class="bottom_button" onclick="closeSidebar()">Continuer mes achats</button>
                 </div>
             </div>
             <div id="intro">
-            <h1>Plus qu'une boulangerie pour vous servir !</h1>
+            <h1 id="titremain" >Plus qu'une boulangerie pour vous servir !</h1>
             <div class="carrousel">
                 <ul class="slides">
+                    <li><img src=""></li>
                     <li><img src="devanture.jpg" alt="Image moulin"></li>
                 </ul>
             <div id="presentation_intro">
@@ -106,7 +107,6 @@
                     <button id="add_panier2" class="ajoutpanier" onclick="recupererValeur(2);openSidebar();">Ajouter au panier</button>
                     </div>
                 </div>
-            </div>
             </div>
         </main>
         <footer>
