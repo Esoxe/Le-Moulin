@@ -1,14 +1,14 @@
 body {
-    margin: 87px 87px;
+    margin: 87px 250px;
 
-    background-color: #FFFCF8;
+    background-color:#ecf0f1;
 }
  h1{
     font-size: 35px ;
     text-align: center;
 }
 header {
-    background-color : #a8dadce0 ;
+    background-color : #FFA101;
     position: fixed ;
     width: 100%;
     top: 0 ;
@@ -85,13 +85,6 @@ header {
     text-align: center;
 }
 
-main {
-margin: 60px 0;
-    background-color:  #457b9d;
-    margin-top: 5%;
-    box-shadow: 0px 5px 5px #888888
-}
-
 .inline {
     margin: 0;
     display: flex;
@@ -104,6 +97,8 @@ h2 {
     text-align: center;
 }
 #intro {
+    margin-top: 150px;
+    background-color: #FFE4C4;
     padding: 0% 6%;
 }
 
@@ -176,8 +171,12 @@ h2 {
     cursor: pointer;
 }    
 
+#footmain {
+    background-color: #b3dee5;
+    margin: 70px 0;
+}
+
 #achat {
-    display: flex;
     padding: 0% 6%;
     font-weight: 1000;
     box-sizing : border-box;
@@ -191,7 +190,7 @@ h2 {
 }
 
 footer {
-    background-color:#1d3557 ;
+    background-color:#31525B ;
 }
 .footer_align {
     margin: 0% 2% 0% 2%;
@@ -269,12 +268,29 @@ footer h3 {
     position: fixed;
     top:0;
     right:0;
-    background-color: #99babb;
+    background-color: #99BABB;
     transition: all 0.25s;
     overflow-x: hidden;
     padding-top: 0;
     z-index: 1000 ;
     flex-direction: column;
+}
+.liste_panier{
+    display: flex;
+    padding: 5px;
+    list-style-type:none;
+}
+.item_panier img {
+    width: 60px;
+}
+.button_panier {
+    padding-left: 20px;
+    padding-top: 15px;
+}
+.text_panier {
+    margin: 0;
+    margin-left: 10px;
+    width: 80px;
 }
 
 .close-sidebar {
@@ -312,7 +328,7 @@ footer h3 {
 }
 
 #continuer_achat {
-    background-color: #99babb ;
+    background-color: #99BABB ;
     border: 2px solid black ;
     color: black;
 }
