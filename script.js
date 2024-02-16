@@ -63,3 +63,22 @@ panier.addEventListener('mouseout',() => {
     sidebar.style.width="0px"
     }
 })
+
+const cartItems =document.getElementById("cart-items");
+
+cart=[]
+
+function addToCart(item){
+    const name = getElementById(item)
+    
+
+}
+
+
+
+function update_cart(){
+    cartItems.innerHTML=""
+    for(const items in cart) {
+
+    }
+}   
