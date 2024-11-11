@@ -13,7 +13,8 @@
                 <a href="#" ><img src="moulin.png" width="80"> </a>        
                     <a  id="moulin" href="#"><h1>LE MOULIN</h1></a>
                     <div id="rightbar">
-                     <a id="contact" href="#quantite-prix">CONTACT</a>
+                     <a class="titre_headbar" href="#quantite-prix">CONTACT</a>
+                     <a class="titre_headbar" href='boutique.html'>BOUTIQUE </a>
                      <div id="panier_overlay"  onclick="openSidebar()">
                      <img id="panier" src="panier.png">
                      <img id="compteur" src="rond.png"> 
@@ -48,11 +49,24 @@
             </div>
             <div id="intro">
             <h1 id="titremain" >Plus qu'une boulangerie pour vous servir !</h1>
-            <div class="carrousel">
-                <ul class="slides">
-                    <li><img src=""></li>
-                    <li><img src="devanture.jpg" alt="Image moulin"></li>
-                </ul>
+        <div class="carrousel">
+            <div class="carrousel-inner">
+                <div class="slide">
+                    <img src="devanture.jpg">
+                </div>
+                <div class="slide">
+                    <img src="vitrine1.jpg">
+                </div>
+                <div class="slide">
+                    <img src="vitrine2.jpg">
+                </div>
+            </div>
+            <div class="carrousel-controls">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+            <div class="carrousel-dots"></div>
+        </div>
             <div id="presentation_intro">
             <h2>LE COIN DU CHEF BRUNO PERRET</h2>
             <p>Je suis un boulanger passionné qui aime mon terroir. Mes réalisations sont faites dans la tradition avec un grand respect du goût. La boulangerie Le Moulin de Bruno est le lieu d'échange avec les clients dans la convivialité.</p>
