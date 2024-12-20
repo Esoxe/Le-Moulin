@@ -82,9 +82,9 @@ header {
 #resultatPanier {
     position: absolute;
     display: inline;
-    top :15px;
+    top :13px;
     width: 20px ;
-    left: 22px;
+    left: 21px;
     text-align: center;
 }
 
@@ -162,33 +162,54 @@ h2 {
 .quantite {
     text-align: center;
 }
-#presentation {
+.presentation {
     vertical-align: center;
     text-align: center;
+    width: 500px;
 }
 #quantite-prix td {
    width: 200px ;
 }
+.button_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 .round_button {
-    border: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
     border-radius: 50%;
-    background-color:#bcbcbc ;
+    background-color:#dbaf93;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 .round_button:hover {
     background-color: black;
     cursor: pointer;
 }
 .quantite_nb {
-    padding: 0% 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    color: #555;
 }
 
 .ajoutpanier {
-    height: 23px;
+    height: 35px;
     border:none;
-    color: white;
-    background-color: rgb(255, 94, 0);
+    width: 250px;
+    color: rgb(116, 46, 14);
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color:#dbaf93;
     border-radius: 100px;
+    margin-top: 8%;
     margin-bottom: 10%;
 }
 .ajoutpanier:hover {
@@ -253,7 +274,7 @@ footer {
 }
 
 footer h3 {
-    color:rgb(0, 255, 76);
+    color:rgb(137, 182, 151);
     
 }
  #cartedevisite {
@@ -300,22 +321,46 @@ footer h3 {
     z-index: 1000 ;
     flex-direction: column;
 }
+.title_panier {
+    color: #072627;
+}
 .liste_panier{
     display: flex;
+    flex-direction: column;
     padding: 5px;
     list-style-type:none;
+    height: 100%;
+}
+.item_panier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bad5d6;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
 }
 .item_panier img {
-    width: 60px;
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 .button_panier {
-    padding-left: 20px;
-    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
 }
 .text_panier {
-    margin: 0;
-    margin-left: 10px;
-    width: 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    margin-right: 5px;
+    color: #333;
 }
 
 .close-sidebar {
@@ -332,7 +377,7 @@ footer h3 {
 }
 
 #bottom_container {
-    border-top: 2px solid  #686b6b;
+    border-top: 2px solid  #284242;
     display: flex;
     margin-top: auto;
     margin-bottom: 8%;
@@ -342,8 +387,8 @@ footer h3 {
     flex-direction: column;
 }
 .bottom_button {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.747);
+    color: #d6eef0;
+    background-color: #072627 ;
     margin-bottom: 5%;
     height: 40px;
 }
@@ -362,7 +407,7 @@ footer h3 {
 }
 
 #prixTotal {
-    padding-left: 100px;
+    padding-left:80px;
 }
 
 .img_boutique {
